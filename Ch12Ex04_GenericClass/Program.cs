@@ -18,7 +18,13 @@ namespace Ch12Ex04_GenericClass
             farm.MakeNoises();
 
             Farm<Cow> dairyFarm = farm.GetCows();
+            //More flexible to use our generic method for this, as we do here for chickens...
+            Farm<Chicken> poultryFarm = farm.GetSpecies<Chicken>();
+
+            Console.WriteLine("Feeding cows");
             dairyFarm.FeedTheAnimals();
+            Console.WriteLine("Feeding chickens");
+            poultryFarm.FeedTheAnimals();
 
             foreach (Cow cow in dairyFarm)
             {

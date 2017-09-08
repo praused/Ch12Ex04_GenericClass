@@ -56,6 +56,19 @@ namespace Ch12Ex04_GenericClass
             }
             return cowFarm;
         }
+        //More flexible to use a generic method for this
+        public Farm<U> GetSpecies<U>() where U : T
+        {
+            Farm<U> speciesFarm = new Farm<U>();
+            foreach (T animal in animals)
+            {
+                if (animal is U)
+                {
+                    speciesFarm.Animals.Add(animal as U);
+                }
+            }
+            return speciesFarm;
+        }
 
     }
 }
