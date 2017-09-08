@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace Ch12Ex04_GenericClass
 {
-    public class Chicken : Animal
+    public class SuperCow : Cow
     {
-        public void LayEgg()
+        public void Fly()
         {
-            Console.WriteLine($"{name} has laid an egg.");
+            Console.WriteLine($"{name} is flying!");
         }
 
-        public Chicken(string newName) : base(newName)
+        public SuperCow(string newName) : base(newName)
         {
         }
 
         public override void MakeANoise()
         {
-            Console.WriteLine($"{name} says 'cluck!'");
+            Console.WriteLine($"{name} says 'here I come to save the day!'");
         }
     }
 }

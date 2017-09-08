@@ -16,5 +16,10 @@ namespace Ch12Ex04_GenericClass
         public Cow(string newName) : base(newName)
         {
         }
+
+        public override void MakeANoise()
+        {
+            Console.WriteLine($"{name} says 'moo!'");
+        }
     }
 }

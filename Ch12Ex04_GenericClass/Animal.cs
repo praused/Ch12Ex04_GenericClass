@@ -36,5 +36,7 @@ namespace Ch12Ex04_GenericClass
         {
             Console.WriteLine($"{name} has been fed.");
         }
+
+        public abstract void MakeANoise();
     }
 }
